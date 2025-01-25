@@ -6,6 +6,7 @@ code = ''
 
 def setting(speed, long, how_many, window_width, window_height):
     tracer = 2
+    gotoY = 0
     bar = Bar('Loading Settings... ', max=7)
     bar.next()
 
@@ -13,17 +14,15 @@ def setting(speed, long, how_many, window_width, window_height):
         if how_many >= 1:
             long = 200
         if how_many >= 4:
-            long = 100
+            long = 80
         if how_many >= 6:
             long = 40
         if how_many >= 8:
             long = 20
         if how_many >= 10:
-            gotoY = 100
             long = 10
             tracer = 3
         if how_many >= 12:
-            gotoY = 200
             long = 5
             tracer = 4
         if how_many >= 14:
@@ -103,7 +102,8 @@ def main(long, angle, codem, how_many, speed, window_width, window_height):
     create_curve(codes, long, angle)
     print('\nEnd!')
 
+how_many = int(input('\n>> Enter the number of iterations: '))
 
-main(200, 45, codem, 15, 100, 1910, 1080)
+main(200, -45, codem, how_many, 100, 1910, 1080)
 
 t.exitonclick()
