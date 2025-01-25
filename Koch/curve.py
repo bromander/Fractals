@@ -1,16 +1,22 @@
 import turtle as t
+from progress.bar import Bar
 
 codem = 'f + f - - f + f'
 code = ''
 
 def setting(speed, long, how_many, window_width, window_height):
     delitel = 2
+    bar = Bar('Setting... ', max=7)
+    bar.next()
     gotoY = 0
     goto = 0
     t.setup(width=window_width, height=window_height)
+    bar.next()
     t.tracer(2)
     long = long / (how_many + 1)
+    bar.next()
     t.speed(speed)
+    bar.next()
 
     if how_many <= 3:
         goto = 300
@@ -23,13 +29,17 @@ def setting(speed, long, how_many, window_width, window_height):
     if how_many > 6:
         print(f'Error, too big iteration!')
         exit()
+    bar.next()
 
     t.up()
     t.goto(-goto, -gotoY)
     t.down()
+    bar.next()
 
     for i in range(0, how_many):
         long = long / delitel
+    bar.next()
+    bar.finish()
 
     return long
 
@@ -51,12 +61,14 @@ def compiling(codem, how_many):
         code2 = code2.split(' ')
         code1 = code2
 
-    print(f'code = {' '.join(code2)}\n')
+    print(f'\ncode = {' '.join(code2)}\n')
     return code2
 
 def create_curve(codes, long, angle):
+    bar = Bar('Drawing... ', max=len(codes))
     t.showturtle()
     for code in codes:
+        bar.next()
         if code == 'f':
             t.forward(long)
         elif code == '+':
@@ -68,16 +80,15 @@ def create_curve(codes, long, angle):
         else:
             print(f'Error, unknown code element: {code}')
             exit()
+    bar.finish()
     t.forward(1)
     t.hideturtle()
 
 def main(long, angle, codem, how_many, speed, window_width, window_height):
     print('Starting...')
-    print('Loading Settings...')
     long = setting(speed, long, how_many, window_width, window_height)
     print('Compiling...')
     codes = compiling(codem, how_many)
-    print('Drawing...')
     create_curve(codes, long, angle)
     print('End!')
 
