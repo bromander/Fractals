@@ -3,6 +3,7 @@ import turtle as t
 window_width = 1910
 window_height = 1080
 t.setup(width=window_width, height=window_height)
+t.tracer(2)
 
 def sierpinski(size, iteration, colorofpen, coloroffill):
     t.fillcolor(coloroffill)
@@ -23,7 +24,7 @@ def sierpinski(size, iteration, colorofpen, coloroffill):
 
 t.speed(1000)
 
-edge_size = 500
+edge_size = 600
 window = t.Screen()
 
 
@@ -31,8 +32,8 @@ t.penup()
 t.goto(-edge_size / 2, -3 ** 0.5 / 4 * edge_size)
 
 
-coloroffill, colorofpen = 'black', 'purple'
+coloroffill, colorofpen = 'black', 'black'
 
-sierpinski(edge_size, 3, coloroffill, colorofpen)
+sierpinski(edge_size, 4, coloroffill, colorofpen)
 
 window.exitonclick()
