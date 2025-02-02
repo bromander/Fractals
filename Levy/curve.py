@@ -87,7 +87,6 @@ def create_curve(codes, long, angle):
             t.right(angle)
         elif code == '':
             bar.next()
-            pass
         else:
             print(f'Error, unknown code element: {code}')
             exit()
