@@ -2,7 +2,6 @@ import turtle as t
 from progress.bar import Bar
 
 codem = '- f + + f -'
-code = ''
 
 def setting(speed, long, how_many, window_width, window_height):
     tracer = 2
@@ -101,8 +100,19 @@ def main(long, angle, codem, how_many, speed, window_width, window_height):
     create_curve(codes, long, angle)
     print('\nEnd!')
 
-how_many = int(input('\n>> Enter the number of iterations: '))
 
-main(200, -45, codem, how_many, 100, 1910, 1080)
+main(200, -45, codem, 6, 0, 1910, 1080)
+
+"""
+Purpose of variables in 'main' function:
+
+long (1) - the long of section
+angle (2) - angle of the segments
+codem (3) - reference to a variable 'codem'
+how_many (4) - how_many iterations
+speed (5) - speed of the turtle (0 - max, 1 - slow, 2 ang > - faster)
+window_width (6) - window width
+window_height (7) - window height
+"""
 
 t.exitonclick()

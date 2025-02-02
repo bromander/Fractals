@@ -50,9 +50,9 @@ def drawing(angle, long, codes):
         if i == 'F':
             t.forward(long)
         elif i == '-':
-            t.left(angle)
-        elif i == '+':
             t.right(angle)
+        elif i == '+':
+            t.left(angle)
         elif i == '[':
             coord.append((t.pos(), t.heading()))
             print(f'Добавляется, coord = {coord}')
@@ -68,6 +68,15 @@ def main(angle, long, codem, how_many):
     code = compiling(codem, how_many)
     drawing(angle, long, code)
 
-main(-25, 14, codem, 6)
+main(25, 14, codem, 6)
+
+"""
+Purpose of variables in 'main' function:
+
+angle (1) - angle of the segments
+long (2) - the long of section
+codem (3) - reference to a variable 'codem'
+how_many (4) - how_many iterations
+"""
 
 t.exitonclick()

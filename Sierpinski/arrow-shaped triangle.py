@@ -65,5 +65,16 @@ def main(long, angle, codem, how_many, speed, tracer):
 
 main(20, 60, codem, 10, 0, 2)
 
+"""
+Purpose of variables in 'main' function:
+
+long (1) - the long of section
+angle (2) - angle of the segments
+codem (3) - reference to a variable 'codem'
+how_many (4) - how_many iterations
+speed (5) - speed of the turtle (0 - max, 1 - slow, 2 ang > - faster)
+tracer (6) - just... tThe same as 'speed' variable
+"""
+
 
 t.exitonclick()
