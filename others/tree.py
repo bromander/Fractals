@@ -30,7 +30,7 @@ def compiling(codem, how_many):
                 now += 1
             elif i == 'F':
                 code2.pop(now)
-                code2.insert(now, f' {F} ')
+                code2.insert(now, f'{F}')
                 now += 1
             else:
                 now += 1
