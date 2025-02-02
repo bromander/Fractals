@@ -2,4 +2,5 @@ This project contains codes for generating fractals. I'm still writing code, so 
 
 Modules:
 - turtle (integrated in python)
-- progress
+- progress (to install, type in the console "pip install progress")
+
