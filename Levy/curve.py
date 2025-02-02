@@ -101,7 +101,7 @@ def main(long, angle, codem, how_many, speed, window_width, window_height):
     print('\nEnd!')
 
 
-main(200, -45, codem, 6, 0, 1910, 1080)
+main(200, -45, codem, 1, 0, 1910, 1080)
 
 """
 Purpose of variables in 'main' function:

@@ -13,7 +13,7 @@ def settings(speed, tracer, long, how_many):
 
     t.up()
     t.speed(0)
-    t.goto(-500, -300)
+    t.goto(-500, -450)
     t.down()
 
     t.speed(speed)
@@ -62,7 +62,7 @@ def main(long, angle, codem, how_many, speed, tracer):
     codem = compiling(codem, how_many)
     drawing(long, angle, codem)
 
-main(10, 120, codem, 11, 0, 5)
+main(40, 120, codem, 9, 0, 2)
 
 '''
 Purpose of variables in 'main' function:
