@@ -68,7 +68,7 @@ def main(angle, long, codem, how_many):
     code = compiling(codem, how_many)
     drawing(angle, long, code)
 
-main(25, 14, codem, 6)
+main(25, 12, codem, 6)
 
 """
 Purpose of variables in 'main' function:

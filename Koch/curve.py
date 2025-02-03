@@ -94,7 +94,7 @@ def main(long, angle, codem, how_many, speed, window_width, window_height):
 
 
 
-main(500, 45, codem, 6, 0, 1910, 1080)
+main(500, 45, codem, 5, 0, 1910, 1080)
 
 """
 Purpose of variables in 'main' function:

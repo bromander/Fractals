@@ -62,7 +62,7 @@ def main(long, angle, codem, how_many, speed, tracer):
     codem = compiling(codem, how_many)
     drawing(long, angle, codem)
 
-main(40, 120, codem, 9, 0, 2)
+main(60, 120, codem, 8, 0, 2)
 
 '''
 Purpose of variables in 'main' function:

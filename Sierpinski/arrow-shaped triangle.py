@@ -63,7 +63,7 @@ def main(long, angle, codem, how_many, speed, tracer):
     t.left(angle)
     drawing(long, angle, codem)
 
-main(20, 60, codem, 10, 0, 2)
+main(50, 60, codem, 8, 0, 2)
 
 """
 Purpose of variables in 'main' function:

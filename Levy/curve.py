@@ -80,10 +80,10 @@ def create_curve(codes, long, angle):
             t.forward(long)
         elif code == '+':
             bar.next()
-            t.left(angle)
+            t.right(angle)
         elif code == '-':
             bar.next()
-            t.right(angle)
+            t.left(angle)
         elif code == '':
             bar.next()
         else:
@@ -101,7 +101,7 @@ def main(long, angle, codem, how_many, speed, window_width, window_height):
     print('\nEnd!')
 
 
-main(200, -45, codem, 1, 0, 1910, 1080)
+main(100, 45, codem, 10, 0, 1910, 1080)
 
 """
 Purpose of variables in 'main' function:
