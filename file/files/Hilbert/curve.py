@@ -7,12 +7,13 @@ t.tracer(6)
 
 
 t.up()
-t.goto(-400, -400)
+t.goto(-400, 0)
 t.down()
 
-codem = 'F + F + F + F'
+codem = 'L F L - F - L F L'
 
-F = 'F F + F + F + F + F F'
+L = '+ R F - L F L - F R +'
+R = '- L F + R F R + F L -'
 
 
 def compiling(codem, how_many):
@@ -21,9 +22,13 @@ def compiling(codem, how_many):
     for i in range(0, how_many-1):
         now = 0
         for i in code1:
-            if i == 'F':
+            if i == 'L':
                 code2.pop(now)
-                code2.insert(now, f' {F} ')
+                code2.insert(now, f' {L} ')
+                now += 1
+            elif i == 'R':
+                code2.pop(now)
+                code2.insert(now, f' {R} ')
                 now += 1
             else:
                 now += 1
@@ -49,7 +54,11 @@ def main(angle, long, codem, how_many):
     code = compiling(codem, how_many)
     drawing(angle, long, code)
 
-main(90, 10, codem, 5)
+loong = int(input('Введите длину отрезка:'))
+how = int(input('Введите длину отрезка:'))
+
+main(90, loong, codem, how)
+
 
 """
 Purpose of variables in 'main' function:

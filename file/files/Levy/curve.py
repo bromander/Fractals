@@ -100,8 +100,10 @@ def main(long, angle, codem, how_many, speed, window_width, window_height):
     create_curve(codes, long, angle)
     print('\nEnd!')
 
+loong = int(input('Введите длину отрезка:'))
+how = int(input('Введите длину отрезка:'))
 
-main(100, 45, codem, 10, 0, 1910, 1080)
+main(loong, 45, codem, how, 0, 1910, 1080)
 
 """
 Purpose of variables in 'main' function:

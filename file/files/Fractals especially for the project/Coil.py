@@ -1,10 +1,11 @@
 import turtle as t
 
 
-codem = 'F - G - G'
+codem = 'G -- G -- G -- G'
 
-F = 'F - G + F + G - F'
-G = 'G G'
+F = 'G + F - F + G'
+
+G = 'F - G + G - F'
 
 def settings(speed, tracer, long, how_many):
     window_width = 1910
@@ -13,7 +14,7 @@ def settings(speed, tracer, long, how_many):
 
     t.up()
     t.speed(0)
-    t.goto(-500, -450)
+    t.goto(0, -200)
     t.down()
 
     t.speed(speed)
@@ -52,8 +53,6 @@ def drawing(long, angle, code):
             t.left(angle)
         elif i == 'F':
             t.forward(long)
-        elif i == 'G':
-            t.forward(long)
         elif i == '+':
             t.right(angle)
 
@@ -62,7 +61,10 @@ def main(long, angle, codem, how_many, speed, tracer):
     codem = compiling(codem, how_many)
     drawing(long, angle, codem)
 
-main(60, 120, codem, 8, 0, 2)
+loong = int(input('Введите длину отрезка:'))
+how = int(input('Введите длину отрезка:'))
+
+main(loong, 90, codem, how, 0, 5)
 
 '''
 Purpose of variables in 'main' function:
