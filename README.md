@@ -2,5 +2,6 @@ This project contains codes for generating fractals. I'm still writing code, so 
 
 Modules:
 - turtle (integrated in python)
+- os  (integrated in python)
 - progress (to install, run libraries.bat)
 
