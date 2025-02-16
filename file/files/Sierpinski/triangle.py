@@ -63,7 +63,7 @@ def main(long, angle, codem, how_many, speed, tracer):
     drawing(long, angle, codem)
 
 loong = int(input('Введите длину отрезка:'))
-how = int(input('Введите длину отрезка:'))
+how = int(input('Введите кол-во итераций:'))
 
 main(loong, 120, codem, 8, 0, how)
 

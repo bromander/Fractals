@@ -49,7 +49,10 @@ def main(angle, long, codem, how_many):
     code = compiling(codem, how_many)
     drawing(angle, long, code)
 
-main(90, 10, codem, 5)
+loong = int(input('Введите длину отрезка:'))
+how = int(input('Введите кол-во итераций:'))
+
+main(90, loong, codem, how)
 
 """
 Purpose of variables in 'main' function:

@@ -55,7 +55,7 @@ def main(angle, long, codem, how_many):
     drawing(angle, long, code)
 
 loong = int(input('Введите длину отрезка:'))
-how = int(input('Введите длину отрезка:'))
+how = int(input('Введите кол-во итераций:'))
 
 main(90, loong, codem, how)
 

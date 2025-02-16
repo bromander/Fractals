@@ -101,7 +101,7 @@ def main(long, angle, codem, how_many, speed, window_width, window_height):
     print('\nEnd!')
 
 loong = int(input('Введите длину отрезка:'))
-how = int(input('Введите длину отрезка:'))
+how = int(input('Введите кол-во итераций:'))
 
 main(loong, 45, codem, how, 0, 1910, 1080)
 

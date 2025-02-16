@@ -63,7 +63,10 @@ def main(long, angle, codem, how_many, speed, tracer):
     t.left(angle)
     drawing(long, angle, codem)
 
-main(50, 60, codem, 8, 0, 2)
+loong = int(input('Введите длину отрезка:'))
+how = int(input('Введите кол-во итераций:'))
+
+main(loong, 60, codem, how, 0, 2)
 
 """
 Purpose of variables in 'main' function:
