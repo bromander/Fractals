@@ -21,6 +21,7 @@ def main():
         fracts = str(input('>> '))
         if fracts in os.listdir():
             os.system(fracts)
+            return
         else:
             print('Ошибка, неправильное название')
 
