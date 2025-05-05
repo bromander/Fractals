@@ -1,11 +1,18 @@
 import turtle as t
 
+'''Переменные которые можно изменять:'''
+long = 200       #Длинна отрезков
+iterations = 6   #Кол-во итераций
 
-codem = 'F - G - G'
 
+codem = 'F - G - G' #Аксиома фрактала
+
+#Множество порождающих правил:
 F = 'F - G + F + G - F'
 G = 'G G'
 
+
+#Настройка
 def settings(speed, tracer, long, how_many):
     window_width = 1910
     window_height = 1080
@@ -22,6 +29,7 @@ def settings(speed, tracer, long, how_many):
     long = long / how_many
     return long
 
+#генерация ключа
 def compiling(codem, how_many):
     code1 = codem.split(' ')
     code2 = codem.split(' ')
@@ -46,6 +54,7 @@ def compiling(codem, how_many):
 
     return code2
 
+#Выполнение движения черепашки следуя ключу
 def drawing(long, angle, code):
     for i in code:
         if i == '-':
@@ -62,20 +71,7 @@ def main(long, angle, codem, how_many, speed, tracer):
     codem = compiling(codem, how_many)
     drawing(long, angle, codem)
 
-loong = int(input('Введите длину отрезка:'))
-how = int(input('Введите кол-во итераций:'))
 
-main(loong, 120, codem, 8, 0, how)
-
-'''
-Purpose of variables in 'main' function:
-
-long (1) - the long of section
-angle (2) - angle of the segments
-codem (3) - reference to a variable 'codem'
-how_many (4) - how_many iterations
-speed (5) - speed of the turtle (0 - max, 1 - slow, 2 ang > - faster)
-tracer (6) - just... tThe same as 'speed' variable
-'''
+main(long, 120, codem, iterations, 0, 5)
 
 t.exitonclick()
